@@ -1,0 +1,1 @@
+-   Java for Beginners by telusko [Playlist](https://www.youtube.com/playlist?list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5)
