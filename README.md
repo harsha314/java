@@ -503,7 +503,7 @@ for (int i = 0; i < n; ++i) {
 }
 ```
 
--   **volatile** can only used in field declaration, volatile fields are directly read from main memory and are never cached. volatile ensures visibility across threads
+-   **volatile** can only be used in field declaration, volatile fields are directly read from main memory and are never cached. volatile ensures visibility across threads
 
 ```java
 class VolatileExample {
@@ -551,4 +551,9 @@ public synchronized void likeAndSubscribe() {
 
 ### Concurrency & Parallelism
 
--   Concurrency can be acheived even with 1 CPU, Parallelism requires that computing be done on 2 CPUs.
+-   Concurrency can be achieved even with 1 CPU, Parallelism requires that computing be done on 2 CPUs.
+
+
+### Future
+
+### Completable Future
