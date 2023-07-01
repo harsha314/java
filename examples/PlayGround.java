@@ -73,59 +73,6 @@ public class PlayGround {
 //        LocalDate localDate = LocalDate.now() ;
 ////        LocalDateTime localDateTime = LocalDateTime.now(). ;
 
-        LinkedList<Integer> queue = new LinkedList<>() ;
-        Stack<Integer> stack = new Stack<>() ;
-
-        stack.add(0) ;
-        stack.add(1) ;
-        stack.add(2) ;
-
-        while(!stack.isEmpty()) {
-            int top = stack.pop() ;
-            System.out.println(top);
-        }
-
-        queue.add(0) ;
-        queue.add(1) ;
-        queue.add(2) ;
-        queue.add(3) ;
-
-        while(!queue.isEmpty()) {
-            int front = queue.poll() ;
-            System.out.println(front);
-        }
-
-        class A {
-            int data ;
-            public A(int data) { this.data = data ; }
-            public int getData() { return this.data; }
-        }
-
-        class B extends A {
-            int data ;
-            public B(int a, int b) {
-                super(b) ;
-            }
-            public int getData() { return this.data; }
-            public void myMethod() {
-                System.out.println(super.data);
-            }
-        }
-
-        class C extends B {
-            int data;
-            public C(int a, int b, int c) {
-                super(b, c) ;
-            }
-            public int getData() { return this.data; }
-            public void myMethod() {
-
-                System.out.println(data + " " + " " + this.getData());
-            }
-        }
-
-        C c = new C(0, 1, 2) ;
-
 
     }
 
