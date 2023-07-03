@@ -214,9 +214,7 @@ class UncheckedException {
 
 -   **Throwable** is the Superclass of Exceptions and Errors
 
-## 3. OOP
-
-### Classes, Objects, Interfaces
+## 3. Classes, Objects, Interfaces
 
 #### 3.1 Constructors
 
@@ -236,7 +234,9 @@ class cat {
 
 #### Inheritance
 
-#### This Keyword
+-   One of the core functions of OOP
+
+#### this Keyword
 
 -   Constructor Chaining
 
@@ -254,7 +254,7 @@ class Animal{
 }
 ```
 
-#### Super Keyword
+#### super Keyword
 
 ```java
 class Animal{
@@ -285,6 +285,8 @@ class Cat extends Animal {
 ```
 
 #### Interfaces, Abstract Class
+
+-   An Interface is a programming construct that defines a contract or a set of rules that classes can adhere to. It provides a way to define a blueprint for a group of related classes to ensure consistency in behavior.
 
 ```java
 interface MyInterface {
@@ -318,7 +320,6 @@ interface MyInterface {
 -   **Method References** are a concise way to refer to methods without executing them. They provide a shorthand notation for lambdas that invoke a single method.
     -   **Static Method Reference**
     -   **Object Method Reference**
-    -   **Arbitrary Method Reference**
     -   **Constructor Reference**
 
 ```java
@@ -417,6 +418,7 @@ Predicate<Integer> predicate = (num) -> {
 };
 predicate.test(5) ;
 
+// Second Type is for the return type
 Function<Integer, Integer> function = (v1) -> {
     return v1 * 2 ;
 };
@@ -553,7 +555,10 @@ public synchronized void likeAndSubscribe() {
 
 -   Concurrency can be achieved even with 1 CPU, Parallelism requires that computing be done on 2 CPUs.
 
-
 ### Future
 
+-   When a Callable is submitted to the executorPool, it returns a Future (Generic of Callable return)
+
 ### Completable Future
+
+-   Futures Improved

@@ -1,17 +1,28 @@
-import java.io.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
-import java.util.function.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-import java.util.Map.* ;
-import java.util.AbstractMap.* ;
 
 public class PlayGround {
     public static void main(String[] args) {
         temp_2023_06_25();
+    }
+
+
+    public static void temp_2023_07_03() {
+        class A implements Comparable<A> {
+            public int compareTo(A a) {
+                return 0 ;
+            }
+        }
+
+        @FunctionalInterface
+        interface i1<T> {
+            public void accept(T t, int index);
+//            public void accept(T t, int index);
+        }
+
+    }
+
+    public static <T> void temp_2023_07_03_1(T t) {
+        System.out.println(t);
     }
 
     public static void temp_2023_06_25() {
