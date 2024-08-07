@@ -339,6 +339,8 @@ List<Person> people = names.stream().map(Person::new)
 
 ### Collections
 
+#### Collection & Map Interface
+
 ### Streams
 
 -   Streams API/package enable functional style of prorgramming
