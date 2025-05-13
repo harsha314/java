@@ -2,7 +2,6 @@ package JavaIO;
 
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Arrays;
 
 public class Basics {
     public static void main(String[] args) {

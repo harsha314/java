@@ -2,15 +2,17 @@ package JavaCollections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 public class C_02_ArrayList {
     public static void main(String[] args) {
-//        methods();
-        java_util_arrays();
-//        copying_Arrays();
-
+        // methods();
+        // java_util_arrays();
+        // copying_Arrays();
+        sortingArrays();
     }
 
     public static void methods() {
@@ -30,7 +32,7 @@ public class C_02_ArrayList {
         A.get(0);
 
         // T remove(int index)
-        A.remove(0) ;
+        A.remove(0);
 
     }
 
@@ -41,7 +43,7 @@ public class C_02_ArrayList {
         // Arrays.asList returns ArrayList with type List
         A = new ArrayList<>(Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
 
-        A.sort(Comparator.naturalOrder()) ;
+        A.sort(Comparator.naturalOrder());
         System.out.println(A);
 
         A.sort(Comparator.reverseOrder());
@@ -49,12 +51,12 @@ public class C_02_ArrayList {
 
         // custom comparator
         A.sort((a, b) -> {
-            if(a < b)
-                return -1 ;
-            else if(a == b)
-                return 0 ;
+            if (a < b)
+                return -1;
+            else if (a == b)
+                return 0;
             else
-                return 1 ;
+                return 1;
         });
         System.out.println(A);
 
@@ -64,19 +66,33 @@ public class C_02_ArrayList {
         List<Integer> A = new ArrayList<>(Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
 
         // Initialising ArrayList
-        List<Integer> B = new ArrayList<>(A) ;
+        List<Integer> B = new ArrayList<>(A);
         // Deep copy
         // data is copied to new address
 
-        List<Integer> C = A ;
+        List<Integer> C = A;
         // Shallow copy
         // C has the address of A
 
-        A.add(10, 55) ;
+        A.add(10, 55);
 
         System.out.println("A: " + A);
         System.out.println("B: " + B);
         System.out.println("C: " + C);
 
+    }
+
+    public static void sortingArrays() {
+        List<Integer> A = new ArrayList<>(Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
+        Collections.sort(A);
+        A.sort(Comparator.naturalOrder());
+        Integer[] aInt = A.toArray(new Integer[A.size()]);
+        System.out.println(Arrays.toString(aInt));
+    }
+
+    public static void arraysReverse() {
+        int n = 10;
+        int[] arr = new int[n];
+        Arrays.sort(arr, 0, n - 1);
     }
 }

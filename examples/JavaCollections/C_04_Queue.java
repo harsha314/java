@@ -8,8 +8,9 @@ public class C_04_Queue {
     public static void main(String[] args) {
         defaultMethods();
     }
+
     public static void defaultMethods() {
-        Queue<Integer> que = new ArrayDeque<>() ;
+        Queue<Integer> que = new ArrayDeque<>();
 
         // enqueue
         que.add(1); // [1]
@@ -18,9 +19,9 @@ public class C_04_Queue {
         que.offer(4); // [1,2,3,4]
         que.add(5); // [1,2,3,4,5]
         // dequeue
-        que.remove() ; // [2,3,4,5]
-        que.remove() ; // [3,4,5]
-        que.remove() ; // [4,5]
+        que.remove(); // [2,3,4,5]
+        que.remove(); // [3,4,5]
+        que.remove(); // [4,5]
 
         // peek
         System.out.println(que.peek());
@@ -30,19 +31,22 @@ public class C_04_Queue {
     }
 
     public static void test() {
-        class TreeNode{
-            int val ;
-            TreeNode left ;
-            TreeNode right ;
-            public TreeNode(){}
-            public TreeNode(int val, TreeNode left, TreeNode right){
-                this.val = val ;
+        class TreeNode {
+            int val;
+            TreeNode left;
+            TreeNode right;
+
+            public TreeNode() {
+            }
+
+            public TreeNode(int val, TreeNode left, TreeNode right) {
+                this.val = val;
                 this.left = left;
-                this.right = right ;
+                this.right = right;
             }
         }
 
-        Queue<TreeNode> que = new ArrayDeque<>() ;
-        que.add(null) ;
+        Queue<TreeNode> que = new ArrayDeque<>();
+        que.add(null);
     }
 }

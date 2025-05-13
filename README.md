@@ -1,14 +1,14 @@
 # Java
 
--   **JDK** consists of compilers, debuggers
-    -   **JRE** consists of libraries
-        -   **JVM** executes bytecode
+- **JDK** consists of compilers, debuggers
+  - **JRE** consists of libraries
+    - **JVM** executes bytecode
 
 ## 1. Basics
 
 ### Primitive Data Types
 
--   **boolean**, **byte**, **short**, **int**, **long**, **float**, **double**, **char**
+- **boolean**, **byte**, **short**, **int**, **long**, **float**, **double**, **char**
 
 ### Basic I/O
 
@@ -55,7 +55,7 @@ class Array{
 }
 ```
 
--   Arrays should be compared with **Arrays.equals** method
+- Arrays should be compared with **Arrays.equals** method
 
 ```java
 int[] arr0 = new int[]{0, 1, 2} ;
@@ -75,8 +75,8 @@ System.out.println(b.equals(a)) ;
 System.out.println(String.format("%s == %s : %b", a, b, a.equals(b))) ;
 ```
 
--   Non-primitive Data types in java should always be compared with equals method
--   Double equals check only if they refer the same address(object)
+- Non-primitive Data types in java should always be compared with equals method
+- Double equals check only if they refer the same address(object)
 
 ```java
 
@@ -112,18 +112,20 @@ class Exception{
 }
 ```
 
--   **finally** block should not contain any return because it overrides other return statements.
--   **finally** is mostly unused.
+- **finally** block should not contain any return because it overrides other return statements.
+- **finally** is mostly unused.
 
 ```java
 public class Finally{
     public static int printANumber1() {
         // This method always returns 3 ;
         try {
+            // DB Connection
             return 1;
         } catch (Exception e) {
             return 2;
         } finally {
+            // Db connection closing code
             return 3;
         }
     }
@@ -156,9 +158,9 @@ class helloWorld {
 
 ### 2.2 Checked & Unchecked Exception
 
--   **Checked Exception** are compile-time exceptions. Ex : FileNotFoundException, Exception, SQLException
+- **Checked Exception** are compile-time exceptions. Ex : FileNotFoundException, Exception, SQLException
 
--   Resolution : place them in try-catch blocks, use _throws_ in method signatures.
+- Resolution : place them in try-catch blocks, use _throws_ in method signatures.
 
 ```java
 import java.io.*;
@@ -186,7 +188,7 @@ class CheckedException{
 }
 ```
 
--   Unchecked Exception are run-time exceptions. Ex : ArithmeticException, NullPointerException, IndexOutOfBoundsException
+- Unchecked Exception are run-time exceptions. Ex : ArithmeticException, NullPointerException, IndexOutOfBoundsException
 
 ```java
 import java.util.*;
@@ -210,9 +212,9 @@ class UncheckedException {
 }
 ```
 
--   **Errors** are unrecoverable situations which are meant not to be handled by code, but to be logged.
+- **Errors** are unrecoverable situations which are meant not to be handled by code, but to be logged.
 
--   **Throwable** is the Superclass of Exceptions and Errors
+- **Throwable** is the Superclass of Exceptions and Errors
 
 ## 3. Classes, Objects, Interfaces
 
@@ -234,11 +236,11 @@ class cat {
 
 #### Inheritance
 
--   One of the core functions of OOP
+- One of the core functions of OOP
 
 #### this Keyword
 
--   Constructor Chaining
+- Constructor Chaining
 
 ```java
 class Animal{
@@ -286,7 +288,7 @@ class Cat extends Animal {
 
 #### Interfaces, Abstract Class
 
--   An Interface is a programming construct that defines a contract or a set of rules that classes can adhere to. It provides a way to define a blueprint for a group of related classes to ensure consistency in behavior.
+- An Interface is a programming construct that defines a contract or a set of rules that classes can adhere to. It provides a way to define a blueprint for a group of related classes to ensure consistency in behavior.
 
 ```java
 interface MyInterface {
@@ -295,7 +297,7 @@ interface MyInterface {
 }
 ```
 
--   **Default Methods** are non-abstract methods in interface.
+- **Default Methods** are non-abstract methods in interface.
 
 ```java
 interface MyInterface {
@@ -305,7 +307,7 @@ interface MyInterface {
 }
 ```
 
--   **Functional Interface** is an interface with only one abstract method, which may have non-abstract methods.
+- **Functional Interface** is an interface with only one abstract method, which may have non-abstract methods.
 
 ```java
 @FunctionalInterface
@@ -317,10 +319,10 @@ interface MyInterface {
 }
 ```
 
--   **Method References** are a concise way to refer to methods without executing them. They provide a shorthand notation for lambdas that invoke a single method.
-    -   **Static Method Reference**
-    -   **Object Method Reference**
-    -   **Constructor Reference**
+- **Method References** are a concise way to refer to methods without executing them. They provide a shorthand notation for lambdas that invoke a single method.
+  - **Static Method Reference**
+  - **Object Method Reference**
+  - **Constructor Reference**
 
 ```java
 class Person{
@@ -343,9 +345,9 @@ List<Person> people = names.stream().map(Person::new)
 
 ### Streams
 
--   Streams API/package enable functional style of prorgramming
--   Stream does not store elements. It simply conveys elements from a source such as a data structure, an array, or an I/O channel, through a pipeline of computational operations.
--   Intermediate Operations, Terminal Operations
+- Streams API/package enable functional style of prorgramming
+- Stream does not store elements. It simply conveys elements from a source such as a data structure, an array, or an I/O channel, through a pipeline of computational operations.
+- Intermediate Operations, Terminal Operations
 
 ```java
 // Streaming an array
@@ -356,7 +358,7 @@ Arrays.stream(names)
         // forEach.(System.out::println);
 ```
 
--   **map**, **filter**
+- **map**, **filter**
 
 ```java
 List<Integer> nums = Arrays.asList(2, 4, 6, 8, 10);
@@ -366,7 +368,7 @@ nums.stream()
     .forEach(num -> System.out.println(num)) ;
 ```
 
--   **flatMap**
+- **flatMap**
 
 ```java
 List<List<Integer>> arr = Arrays.asList(
@@ -388,7 +390,7 @@ Arrays.stream(arr)
     .forEach(a -> System.out.println(a));
 ```
 
--   **collect**
+- **collect**
 
 ```java
 int[] arr = {0, 1, 4, 2, 3};
@@ -406,8 +408,8 @@ List<List<Integer>> list = Arrays.stream(arr)
                                 .collect(Collectors.toList());
 ```
 
--   Consumer is a Functional Interface which returns void
--   Predicate is a Functional Interface which accepts T t returns boolean
+- Consumer is a Functional Interface which returns void
+- Predicate is a Functional Interface which accepts T t returns boolean
 
 ```java
 Consumer<Integer> consumer = (num) -> {
@@ -434,9 +436,9 @@ Supplier<Integer> supplier = () -> {
 supplier.get() ;
 ```
 
--   parallelStream() processes the stream concurrently across multiple threads
+- parallelStream() processes the stream concurrently across multiple threads
 
--   Optional is a class introduced in Java 8 that is designed to represent an optional value. It is used to handle situations where a value may or may not be present. It helps to avoid NullPointerExceptions and provides a more expressive way to handle nullability in Java code.
+- Optional is a class introduced in Java 8 that is designed to represent an optional value. It is used to handle situations where a value may or may not be present. It helps to avoid NullPointerExceptions and provides a more expressive way to handle nullability in Java code.
 
 ## 5. File Handling
 
@@ -454,13 +456,13 @@ try (FileReader fr = new FileReader("<file-location>")) {
 
 ## java.lang
 
--   Core Functionality of java
-    1. Object
-    1. String
-    1. Wrapper Classes
-    1. Throwable, Exception, RuntimeException Classes
-    1. Thread, Runnable Classes
-    1. Class
+- Core Functionality of java
+  1. Object
+  1. String
+  1. Wrapper Classes
+  1. Throwable, Exception, RuntimeException Classes
+  1. Thread, Runnable Classes
+  1. Class
 
 ## Concurrency
 
@@ -484,7 +486,7 @@ Thread myThread2 = new Thread() {
 
 #### Thread join method
 
--   join method waits until the thread is executed
+- join method waits until the thread is executed
 
 ```java
 int n = 10;
@@ -507,7 +509,7 @@ for (int i = 0; i < n; ++i) {
 }
 ```
 
--   **volatile** can only be used in field declaration, volatile fields are directly read from main memory and are never cached. volatile ensures visibility across threads
+- **volatile** can only be used in field declaration, volatile fields are directly read from main memory and are never cached. volatile ensures visibility across threads
 
 ```java
 class VolatileExample {
@@ -543,8 +545,8 @@ example.start();
 
 #### Synchronized keyword
 
--   **synchronized** ensures atomicity and visibility
--   **synchronized** methods
+- **synchronized** ensures atomicity and visibility
+- **synchronized** methods
 
 ```java
 // only one thread executes the method at any given time
@@ -555,12 +557,12 @@ public synchronized void likeAndSubscribe() {
 
 ### Concurrency & Parallelism
 
--   Concurrency can be achieved even with 1 CPU, Parallelism requires that computing be done on 2 CPUs.
+- Concurrency can be achieved even with 1 CPU, Parallelism requires that computing be done on 2 CPUs.
 
 ### Future
 
--   When a Callable is submitted to the executorPool, it returns a Future (Generic of Callable return)
+- When a Callable is submitted to the executorPool, it returns a Future (Generic of Callable return)
 
 ### Completable Future
 
--   Futures Improved
+- Futures Improved

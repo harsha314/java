@@ -2,7 +2,9 @@ package JavaCollections;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -37,7 +39,6 @@ public class C_05_Map {
         System.out.println(mp.replace(3, 5, 7));
         System.out.println(mp.getOrDefault(3, -1));
         System.out.println("***********************\n");
-
     }
 
 }

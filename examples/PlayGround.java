@@ -1,22 +1,24 @@
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class PlayGround {
     public static void main(String[] args) {
         temp_2023_06_25();
     }
 
-
     public static void temp_2023_07_03() {
         class A implements Comparable<A> {
             public int compareTo(A a) {
-                return 0 ;
+                return 0;
             }
         }
 
         @FunctionalInterface
         interface i1<T> {
             public void accept(T t, int index);
-//            public void accept(T t, int index);
+            // public void accept(T t, int index);
         }
 
     }
@@ -27,63 +29,62 @@ public class PlayGround {
 
     public static void temp_2023_06_25() {
 
-//        HashMap<Integer, Integer> hm = new HashMap<>() ;
-//
-//        hm.put(2, 0) ;
-//        hm.put(5, 3) ;
-//
-//        for(Entry<Integer, Integer> entry : hm.entrySet()) {
-//            System.out.println(entry.getKey() + " " + entry.getValue());
-//        }
-//
-//        HashSet<Integer> hashSet = new HashSet<>() ;
+        // HashMap<Integer, Integer> hm = new HashMap<>() ;
+        //
+        // hm.put(2, 0) ;
+        // hm.put(5, 3) ;
+        //
+        // for(Entry<Integer, Integer> entry : hm.entrySet()) {
+        // System.out.println(entry.getKey() + " " + entry.getValue());
+        // }
+        //
+        // HashSet<Integer> hashSet = new HashSet<>() ;
 
-//        SortedSet<Integer> sortedSet = new TreeSet<>();
-//
-//        sortedSet.add(1) ;
-//        sortedSet.add(3) ;
-//        sortedSet.add(5) ;
-//
-//        NavigableSet<Integer> navigableSet = new TreeSet<>() ;
-//
-//        navigableSet.add(1) ;
-//        navigableSet.add(3) ;
-//        navigableSet.add(5) ;
-//
-//
-//        TreeSet<Integer> treeSet = new TreeSet<>() ;
-//
-//        treeSet.add(1) ;
-//        treeSet.add(1) ;
-//        treeSet.add(3) ;
-//        treeSet.add(4) ;
-//        treeSet.add(10) ;
-//
-//        System.out.println(treeSet.lower(1));
-//        System.out.println(treeSet.higher(11));
-//
-//        for(Integer num : treeSet) {
-//            System.out.println(num);
-//        }
-//
-//
-//        TreeMap<Integer, Integer> treeMap = new TreeMap<>() ;
-//
-//        treeMap.put(1, 2) ;
-////        treeMap.put(2, 4) ;
-//        treeMap.put(3, 6) ;
-//        treeMap.put(5, 10) ;
-//
-//        System.out.println(treeMap.lowerKey(4));
-//
-//        Optional<Integer> optionalInteger = Optional.ofNullable(null) ;
-//
-//        optionalInteger.or(() -> Optional.of(0)) ;
-//        Integer val = optionalInteger.orElse(0) ;
-//
-//        LocalDate localDate = LocalDate.now() ;
-////        LocalDateTime localDateTime = LocalDateTime.now(). ;
-
+        // SortedSet<Integer> sortedSet = new TreeSet<>();
+        //
+        // sortedSet.add(1) ;
+        // sortedSet.add(3) ;
+        // sortedSet.add(5) ;
+        //
+        // NavigableSet<Integer> navigableSet = new TreeSet<>() ;
+        //
+        // navigableSet.add(1) ;
+        // navigableSet.add(3) ;
+        // navigableSet.add(5) ;
+        //
+        //
+        // TreeSet<Integer> treeSet = new TreeSet<>() ;
+        //
+        // treeSet.add(1) ;
+        // treeSet.add(1) ;
+        // treeSet.add(3) ;
+        // treeSet.add(4) ;
+        // treeSet.add(10) ;
+        //
+        // System.out.println(treeSet.lower(1));
+        // System.out.println(treeSet.higher(11));
+        //
+        // for(Integer num : treeSet) {
+        // System.out.println(num);
+        // }
+        //
+        //
+        // TreeMap<Integer, Integer> treeMap = new TreeMap<>() ;
+        //
+        // treeMap.put(1, 2) ;
+        //// treeMap.put(2, 4) ;
+        // treeMap.put(3, 6) ;
+        // treeMap.put(5, 10) ;
+        //
+        // System.out.println(treeMap.lowerKey(4));
+        //
+        // Optional<Integer> optionalInteger = Optional.ofNullable(null) ;
+        //
+        // optionalInteger.or(() -> Optional.of(0)) ;
+        // Integer val = optionalInteger.orElse(0) ;
+        //
+        // LocalDate localDate = LocalDate.now() ;
+        //// LocalDateTime localDateTime = LocalDateTime.now(). ;
 
     }
 
@@ -173,6 +174,24 @@ public class PlayGround {
 
     public static void temp_2023_05_17() {
 
+    }
+
+    public static void temp_2025_04_01() {
+        int[] arr = { 1, 2, 3 };
+        Arrays.copyOf(arr, arr.length);
+        List<Integer> list = Arrays.asList(1, 5, 6, 7, 8, 9, 10);
+        Map<Integer, Integer> map = list.stream().collect(Collectors.toMap(Function.identity(), x -> x - 2));
+        System.out.println(map);
+    }
+
+    public static void temp_2025_04_22() {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.remove(10);
+        SortedMap<Integer, Integer> sortedMap = new TreeMap<>();
+        sortedMap.put(1, 4);
+        sortedMap.put(5, 2);
+        sortedMap.put(10, 1);
+        sortedMap.firstKey();
     }
 
 }
